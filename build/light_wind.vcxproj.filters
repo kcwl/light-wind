@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="通用">
+      <UniqueIdentifier>9d48d62a-26dc-457c-924f-b9c85236b215</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资产">
+      <UniqueIdentifier>a7c52061-a1a1-4591-844b-65d3143787cb</UniqueIdentifier>
+      <Extensions>bmp;fbx;gif;jpg;jpeg;tga;tiff;tif;png</Extensions>
+    </Filter>
+    <Filter Include="内容">
+      <UniqueIdentifier>666aa2a0-e032-4ab0-a95a-536709f80e0d</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\content\Sample3DSceneRenderer.cpp">
+      <Filter>内容</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\content\SampleFpsTextRenderer.cpp">
+      <Filter>内容</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\common\DeviceResources.cpp">
+      <Filter>通用</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\App.cpp" />
+    <ClCompile Include="..\src\light_wind.cpp" />
+    <ClCompile Include="..\src\pch.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\content\Sample3DSceneRenderer.h">
+      <Filter>内容</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\content\SampleFpsTextRenderer.h">
+      <Filter>内容</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\content\ShaderStructures.h">
+      <Filter>内容</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\common\DeviceResources.h">
+      <Filter>通用</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\common\DirectXHelper.h">
+      <Filter>通用</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\common\StepTimer.h">
+      <Filter>通用</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\App.h" />
+    <ClInclude Include="..\include\light_wind.h" />
+    <ClInclude Include="..\include\pch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\assets\LockScreenLogo.scale-200.png">
+      <Filter>资产</Filter>
+    </Image>
+    <Image Include="..\assets\SplashScreen.scale-200.png">
+      <Filter>资产</Filter>
+    </Image>
+    <Image Include="..\assets\Square44x44Logo.scale-200.png">
+      <Filter>资产</Filter>
+    </Image>
+    <Image Include="..\assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <Filter>资产</Filter>
+    </Image>
+    <Image Include="..\assets\Square150x150Logo.scale-200.png">
+      <Filter>资产</Filter>
+    </Image>
+    <Image Include="..\assets\StoreLogo.png">
+      <Filter>资产</Filter>
+    </Image>
+    <Image Include="..\assets\Wide310x150Logo.scale-200.png">
+      <Filter>资产</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
