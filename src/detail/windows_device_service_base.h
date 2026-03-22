@@ -1,8 +1,8 @@
 #pragma once
 #include <boost/asio.hpp>
+#include <detail/string.hpp>
+#include <detail/win_iocp_event_wait_op.hpp>
 #include <iostream>
-#include <string.hpp>
-#include <win_iocp_event_wait_op.hpp>
 
 namespace light_wind
 {

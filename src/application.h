@@ -1,8 +1,8 @@
 #pragma once
+#include <detail/io_service_pool.h>
+#include <detail/string.hpp>
 #include <event.h>
-#include <io_service_pool.h>
 #include <rhi_device.hpp>
-#include <string.hpp>
 
 namespace light_wind
 {

@@ -2,7 +2,7 @@
 //
 
 #include <iostream>
-#include <application.hpp>
+#include <application.h>
 
 using namespace light_wind;
 

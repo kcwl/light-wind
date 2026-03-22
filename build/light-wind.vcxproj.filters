@@ -5,56 +5,65 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="头文件">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
     <Filter Include="资源文件">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="src\detail">
+      <UniqueIdentifier>{331c449a-fd3a-4508-b87d-ece61c680c08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\impl">
+      <UniqueIdentifier>{9264d7fe-2deb-48ee-94cc-d3d5f7f30c56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\detail\impl">
+      <UniqueIdentifier>{d854b979-4ea5-49ef-9305-3e9c47bbb29d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\include\application.hpp">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\io_service_pool.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\event.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\win_iocp_event_wait_op.hpp">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\windows_device_service_base.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\string.hpp">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\window_device_service.hpp">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\directd3d_11.hpp">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\rhi_device.hpp">
-      <Filter>头文件</Filter>
-    </ClInclude>
+    <ClCompile Include="light-wind.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\impl\application.cpp">
+      <Filter>src\impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\detail\impl\io_service_pool.cpp">
+      <Filter>src\detail\impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\detail\impl\windows_device_service_base.cpp">
+      <Filter>src\detail\impl</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\io_service_pool.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\light-wind.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\windows_device_service_base.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\application.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
+    <ClInclude Include="..\src\application.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\event.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\rhi_device.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\detail\directd3d_11.hpp">
+      <Filter>src\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\detail\io_service_pool.h">
+      <Filter>src\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\detail\string.hpp">
+      <Filter>src\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\detail\win_iocp_event_wait_op.hpp">
+      <Filter>src\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\detail\window_device_service.hpp">
+      <Filter>src\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\detail\windows_device_service_base.h">
+      <Filter>src\detail</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

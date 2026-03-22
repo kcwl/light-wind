@@ -19,21 +19,21 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\include\application.hpp" />
-    <ClInclude Include="..\include\directd3d_11.hpp" />
-    <ClInclude Include="..\include\event.h" />
-    <ClInclude Include="..\include\io_service_pool.h" />
-    <ClInclude Include="..\include\rhi_device.hpp" />
-    <ClInclude Include="..\include\string.hpp" />
-    <ClInclude Include="..\include\windows_device_service_base.h" />
-    <ClInclude Include="..\include\window_device_service.hpp" />
-    <ClInclude Include="..\include\win_iocp_event_wait_op.hpp" />
+    <ClCompile Include="..\src\detail\impl\io_service_pool.cpp" />
+    <ClCompile Include="..\src\detail\impl\windows_device_service_base.cpp" />
+    <ClCompile Include="..\src\impl\application.cpp" />
+    <ClCompile Include="light-wind.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\application.cpp" />
-    <ClCompile Include="..\src\io_service_pool.cpp" />
-    <ClCompile Include="..\src\light-wind.cpp" />
-    <ClCompile Include="..\src\windows_device_service_base.cpp" />
+    <ClInclude Include="..\src\application.h" />
+    <ClInclude Include="..\src\detail\directd3d_11.hpp" />
+    <ClInclude Include="..\src\detail\io_service_pool.h" />
+    <ClInclude Include="..\src\detail\string.hpp" />
+    <ClInclude Include="..\src\detail\windows_device_service_base.h" />
+    <ClInclude Include="..\src\detail\window_device_service.hpp" />
+    <ClInclude Include="..\src\detail\win_iocp_event_wait_op.hpp" />
+    <ClInclude Include="..\src\event.h" />
+    <ClInclude Include="..\src\rhi_device.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>
@@ -122,7 +122,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;_WIN32_WINNT=0xA00;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
-      <AdditionalIncludeDirectories>D:\boost_1_88_0;$(SollutionDir)../include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\boost_1_88_0;$(SollutionDir)../src/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

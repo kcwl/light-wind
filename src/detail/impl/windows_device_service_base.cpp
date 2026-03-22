@@ -1,4 +1,4 @@
-#include <windows_device_service_base.h>
+#include <detail/windows_device_service_base.h>
 
 namespace
 {
