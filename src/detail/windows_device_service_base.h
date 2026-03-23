@@ -84,7 +84,7 @@ namespace light_wind
 					{
 						while (!PeekMessage(&msg, NULL, 0, 0, PM_REMOVE))
 							;
-
+						std::cout << "msg:" << std::hex << msg.message << std::endl;
 						iocp_service_.on_completion(op);
 
 						co_return;
