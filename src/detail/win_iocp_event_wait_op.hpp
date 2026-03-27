@@ -29,8 +29,6 @@ namespace light_wind
 			switch (msg_.message)
 			{
 			case WM_QUIT:
-			case WM_DESTROY:
-			case WM_CLOSE:
 				{
 					event_ptr_ = std::make_shared<quit_event<PeerIoExecutor>>(peer_ex_);
 				}

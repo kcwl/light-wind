@@ -4,6 +4,18 @@ namespace
 {
 	LRESULT CALLBACK wnd_proc(HWND window_handle, UINT msg, WPARAM wparam, LPARAM lparam)
 	{
+		switch (msg)
+		{
+			case WM_CLOSE:
+				DestroyWindow(window_handle);
+				break;
+			case WM_DESTROY:
+				PostQuitMessage(0);
+				break;
+			default:
+				break;
+		}
+
 		return DefWindowProc(window_handle, msg, wparam, lparam);
 	}
 } // namespace
