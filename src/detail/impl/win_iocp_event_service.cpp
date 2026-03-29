@@ -1,4 +1,6 @@
-#include <detail/windows_device_service_base.h>
+#include <detail/win_iocp_event_service.h>
+#include <detail/window_handle.hpp>
+#include <iostream>
 
 namespace
 {
@@ -6,14 +8,14 @@ namespace
 	{
 		switch (msg)
 		{
-			case WM_CLOSE:
-				DestroyWindow(window_handle);
-				break;
-			case WM_DESTROY:
-				PostQuitMessage(0);
-				break;
-			default:
-				break;
+		case WM_CLOSE:
+			DestroyWindow(window_handle);
+			break;
+		case WM_DESTROY:
+			PostQuitMessage(0);
+			break;
+		default:
+			break;
 		}
 
 		return DefWindowProc(window_handle, msg, wparam, lparam);
@@ -22,13 +24,7 @@ namespace
 
 namespace light_wind
 {
-	windows_device_service_base::windows_device_service_base(boost::asio::execution_context& context)
-		: context_(context)
-		, iocp_service_(boost::asio::use_service<boost::asio::detail::win_iocp_io_context>(context))
-	{}
-
-	void windows_device_service_base::create_window(base_implementation_type& impl, const string& title,
-													const string& name)
+	void win_iocp_event_service::create_window(implementation_type& impl, const string& title, const string& name)
 	{
 		impl.instance = (HINSTANCE)GetModuleHandle(NULL);
 
@@ -58,9 +54,12 @@ namespace light_wind
 		{
 			std::cout << std::format("Create Window Error: {}", ec) << std::endl;
 		}
+
+		window_handle::handle = impl.handle;
+		window_handle::instance = impl.instance;
 	}
 
-	void windows_device_service_base::show(base_implementation_type& impl)
+	void win_iocp_event_service::show(implementation_type& impl)
 	{
 		ShowWindow(impl.handle, SW_SHOW);
 	}

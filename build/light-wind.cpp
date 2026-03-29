@@ -10,8 +10,6 @@ int main(int argc, char** argv)
 {
     application app(argc, argv);
 
-    app.create_main_window(L"demo", L"demo");
-
     return app.run();
 }
 

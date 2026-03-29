@@ -14,8 +14,14 @@ namespace light_wind
 	application::application(int argc, char** argv)
 		: main_io_()
 		, impl_(0, 0, main_io_)
+		, name_(L"demo")
+		, title_(L"demo")
 	{
 		parse_command(argc, argv);
+
+		create_main_window(title_, name_);
+
+		render_ptr_ = std::make_shared<render_type>(main_io_);
 	}
 
 	application::~application()
@@ -52,10 +58,12 @@ namespace light_wind
 	{
 		preinit();
 
+		auto loop_if_failed_func = [&] () { render_ptr_->present(); };
+
 		for (;;)
 		{
 			boost::system::error_code ec{};
-			auto event = co_await async_wait<event_type>(pool_ptr_->get_io_service(),
+			auto event = co_await async_wait<event_type>(pool_ptr_->get_io_service(), loop_if_failed_func,
 														 boost::asio::redirect_error(boost::asio::use_awaitable, ec));
 
 			if (!event)

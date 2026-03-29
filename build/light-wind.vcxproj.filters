@@ -22,6 +22,9 @@
     <Filter Include="src\detail\impl">
       <UniqueIdentifier>{d854b979-4ea5-49ef-9305-3e9c47bbb29d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\render">
+      <UniqueIdentifier>{17d95420-bd15-40f2-a162-d8fd8ae9b0a3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="light-wind.cpp">
@@ -33,7 +36,13 @@
     <ClCompile Include="..\src\detail\impl\io_service_pool.cpp">
       <Filter>src\detail\impl</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\detail\impl\windows_device_service_base.cpp">
+    <ClCompile Include="..\src\detail\impl\directd3d_11.cpp">
+      <Filter>src\detail\impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\detail\impl\win_iocp_event_service.cpp">
+      <Filter>src\detail\impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\detail\impl\win_iocp_service_base.cpp">
       <Filter>src\detail\impl</Filter>
     </ClCompile>
   </ItemGroup>
@@ -44,10 +53,10 @@
     <ClInclude Include="..\src\event.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\rhi_device.hpp">
+    <ClInclude Include="..\src\rhi_service.hpp">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\detail\directd3d_11.hpp">
+    <ClInclude Include="..\src\detail\directd3d_11.h">
       <Filter>src\detail</Filter>
     </ClInclude>
     <ClInclude Include="..\src\detail\io_service_pool.h">
@@ -59,11 +68,38 @@
     <ClInclude Include="..\src\detail\win_iocp_event_wait_op.hpp">
       <Filter>src\detail</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\detail\window_device_service.hpp">
+    <ClInclude Include="..\src\detail\win_iocp_render_device.hpp">
       <Filter>src\detail</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\detail\windows_device_service_base.h">
+    <ClInclude Include="..\src\basic_render.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\render\geometry.h">
+      <Filter>src\render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\render\texture.h">
+      <Filter>src\render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\render\text.h">
+      <Filter>src\render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\render\mesh3d.h">
+      <Filter>src\render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\detail\win_device_draw_op.hpp">
       <Filter>src\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\detail\win_iocp_event_service.h">
+      <Filter>src\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\detail\win_iocp_service_base.hpp">
+      <Filter>src\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\detail\window_handle.hpp">
+      <Filter>src\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\event_service.hpp">
+      <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

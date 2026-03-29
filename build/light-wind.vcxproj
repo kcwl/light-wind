@@ -19,21 +19,32 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\src\detail\impl\directd3d_11.cpp" />
     <ClCompile Include="..\src\detail\impl\io_service_pool.cpp" />
-    <ClCompile Include="..\src\detail\impl\windows_device_service_base.cpp" />
+    <ClCompile Include="..\src\detail\impl\win_iocp_event_service.cpp" />
+    <ClCompile Include="..\src\detail\impl\win_iocp_service_base.cpp" />
     <ClCompile Include="..\src\impl\application.cpp" />
     <ClCompile Include="light-wind.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\application.h" />
-    <ClInclude Include="..\src\detail\directd3d_11.hpp" />
+    <ClInclude Include="..\src\basic_render.hpp" />
+    <ClInclude Include="..\src\detail\directd3d_11.h" />
     <ClInclude Include="..\src\detail\io_service_pool.h" />
     <ClInclude Include="..\src\detail\string.hpp" />
-    <ClInclude Include="..\src\detail\windows_device_service_base.h" />
-    <ClInclude Include="..\src\detail\window_device_service.hpp" />
+    <ClInclude Include="..\src\detail\win_iocp_render_device.hpp" />
+    <ClInclude Include="..\src\detail\window_handle.hpp" />
+    <ClInclude Include="..\src\detail\win_device_draw_op.hpp" />
+    <ClInclude Include="..\src\detail\win_iocp_event_service.h" />
     <ClInclude Include="..\src\detail\win_iocp_event_wait_op.hpp" />
+    <ClInclude Include="..\src\detail\win_iocp_service_base.hpp" />
     <ClInclude Include="..\src\event.h" />
-    <ClInclude Include="..\src\rhi_device.hpp" />
+    <ClInclude Include="..\src\event_service.hpp" />
+    <ClInclude Include="..\src\render\geometry.h" />
+    <ClInclude Include="..\src\render\mesh3d.h" />
+    <ClInclude Include="..\src\render\text.h" />
+    <ClInclude Include="..\src\render\texture.h" />
+    <ClInclude Include="..\src\rhi_service.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>
@@ -122,11 +133,12 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;_WIN32_WINNT=0xA00;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
-      <AdditionalIncludeDirectories>D:\boost_1_88_0;$(SollutionDir)../src/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\boost_1_88_0;$(SolutionDir)../src/;$(SolutionDir)../3rd/DirectXTK/Inc;$(SolutionDir)../3rd/DirectXTK/Src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>d3d11.lib;dxgi.lib;d2d1.lib;dwrite.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
