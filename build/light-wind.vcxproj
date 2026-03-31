@@ -43,7 +43,7 @@
     <ClInclude Include="..\src\detail\win_iocp_event_service.h" />
     <ClInclude Include="..\src\detail\win_iocp_event_wait_op.hpp" />
     <ClInclude Include="..\src\detail\win_iocp_service_base.hpp" />
-    <ClInclude Include="..\src\event.h" />
+    <ClInclude Include="..\src\event.hpp" />
     <ClInclude Include="..\src\event_service.hpp" />
     <ClInclude Include="..\src\render\geometry.h" />
     <ClInclude Include="..\src\render\mesh3d.h" />

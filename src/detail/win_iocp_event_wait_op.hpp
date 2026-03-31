@@ -1,6 +1,6 @@
 #pragma once
 #include <boost/asio.hpp>
-#include <event.h>
+#include <event.hpp>
 
 namespace light_wind
 {
@@ -28,18 +28,13 @@ namespace light_wind
 
 			switch (msg_.message)
 			{
-			case WM_QUIT:
-				{
-					event_ptr_ = std::make_shared<quit_event<PeerIoExecutor>>(peer_ex_);
-				}
-				break;
 			case WM_SETCURSOR:
 				{
 				}
 				break;
 			case WM_IME_CHAR:
 				{
-					event_ptr_ = std::make_shared<key_press_event<PeerIoExecutor>>(peer_ex_);
+					event_ptr_ = std::make_shared<key_press<PeerIoExecutor>>(peer_ex_);
 				}
 				break;
 			case WM_INPUTLANGCHANGEREQUEST:
@@ -68,12 +63,6 @@ namespace light_wind
 			case WM_MOVING:
 				{
 					event_ptr_ = std::make_shared<mouse_move_event<PeerIoExecutor>>(peer_ex_);
-				}
-				break;
-			case WM_SIZE:
-			case WM_SIZING:
-				{
-					event_ptr_ = std::make_shared<resize_event<PeerIoExecutor>>(peer_ex_);
 				}
 				break;
 			case WM_WINDOWPOSCHANGED:

@@ -1,4 +1,5 @@
 #include <application.h>
+#include <event.hpp>
 
 namespace light_wind
 {
@@ -63,17 +64,12 @@ namespace light_wind
 		for (;;)
 		{
 			boost::system::error_code ec{};
-			auto event = co_await async_wait<event_type>(pool_ptr_->get_io_service(), loop_if_failed_func,
+			auto event = co_await async_wait<basic_event<executor_type>>(pool_ptr_->get_io_service(), loop_if_failed_func,
 														 boost::asio::redirect_error(boost::asio::use_awaitable, ec));
 
 			if (!event)
 			{
 				continue;
-			}
-
-			if (event->kind() == event_kind::quit)
-			{
-				break;
 			}
 
 			boost::asio::co_spawn(event->get_executor(), process_event(event), boost::asio::detached);

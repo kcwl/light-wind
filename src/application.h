@@ -2,7 +2,6 @@
 #include <basic_render.hpp>
 #include <detail/io_service_pool.h>
 #include <detail/string.hpp>
-#include <event.h>
 #include <event_service.hpp>
 
 namespace light_wind
@@ -10,8 +9,6 @@ namespace light_wind
 	class application
 	{
 		using executor_type = boost::asio::io_context::executor_type;
-
-		using event_type = basic_event<executor_type>;
 
 		using render_type = basic_render<executor_type>;
 
