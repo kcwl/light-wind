@@ -25,6 +25,15 @@
     <Filter Include="src\render">
       <UniqueIdentifier>{17d95420-bd15-40f2-a162-d8fd8ae9b0a3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\ui">
+      <UniqueIdentifier>{0e7120f9-6d8e-44fc-a740-e74a1592c03e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\ui\detail">
+      <UniqueIdentifier>{2f93e052-a7a6-4769-8cfd-7479225aedfb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\ui\impl">
+      <UniqueIdentifier>{a47136a3-c018-4416-940b-6c5ba5131664}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="light-wind.cpp">
@@ -44,6 +53,21 @@
     </ClCompile>
     <ClCompile Include="..\src\detail\impl\win_iocp_service_base.cpp">
       <Filter>src\detail\impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\impl\ui_node.cpp">
+      <Filter>src\ui\impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\impl\ui_widget_base.cpp">
+      <Filter>src\ui\impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\impl\layout_base.cpp">
+      <Filter>src\ui\impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\impl\ui_config.cpp">
+      <Filter>src\ui\impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\impl\ui_widget.cpp">
+      <Filter>src\ui\impl</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -100,6 +124,48 @@
     </ClInclude>
     <ClInclude Include="..\src\event_service.hpp">
       <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ui\detail\coordinate.hpp">
+      <Filter>src\ui\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ui\position.hpp">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ui\detail\rectangle.hpp">
+      <Filter>src\ui\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ui\detail\quad_tree_node.hpp">
+      <Filter>src\ui\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ui\detail\limit_list.hpp">
+      <Filter>src\ui\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ui\ui_store.hpp">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ui\ui_node.h">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ui\ui_widget_base.h">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ui\layout_base.h">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ui\basic_layout.hpp">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ui\hbox_layout.hpp">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ui\vbox_layout.hpp">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ui\ui_widget.h">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ui\ui_config.h">
+      <Filter>src\ui</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

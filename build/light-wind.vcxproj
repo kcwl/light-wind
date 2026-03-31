@@ -24,6 +24,11 @@
     <ClCompile Include="..\src\detail\impl\win_iocp_event_service.cpp" />
     <ClCompile Include="..\src\detail\impl\win_iocp_service_base.cpp" />
     <ClCompile Include="..\src\impl\application.cpp" />
+    <ClCompile Include="..\src\ui\impl\layout_base.cpp" />
+    <ClCompile Include="..\src\ui\impl\ui_config.cpp" />
+    <ClCompile Include="..\src\ui\impl\ui_node.cpp" />
+    <ClCompile Include="..\src\ui\impl\ui_widget.cpp" />
+    <ClCompile Include="..\src\ui\impl\ui_widget_base.cpp" />
     <ClCompile Include="light-wind.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -45,6 +50,20 @@
     <ClInclude Include="..\src\render\text.h" />
     <ClInclude Include="..\src\render\texture.h" />
     <ClInclude Include="..\src\rhi_service.hpp" />
+    <ClInclude Include="..\src\ui\basic_layout.hpp" />
+    <ClInclude Include="..\src\ui\detail\coordinate.hpp" />
+    <ClInclude Include="..\src\ui\detail\limit_list.hpp" />
+    <ClInclude Include="..\src\ui\detail\quad_tree_node.hpp" />
+    <ClInclude Include="..\src\ui\detail\rectangle.hpp" />
+    <ClInclude Include="..\src\ui\hbox_layout.hpp" />
+    <ClInclude Include="..\src\ui\layout_base.h" />
+    <ClInclude Include="..\src\ui\position.hpp" />
+    <ClInclude Include="..\src\ui\ui_config.h" />
+    <ClInclude Include="..\src\ui\ui_node.h" />
+    <ClInclude Include="..\src\ui\ui_store.hpp" />
+    <ClInclude Include="..\src\ui\ui_widget.h" />
+    <ClInclude Include="..\src\ui\ui_widget_base.h" />
+    <ClInclude Include="..\src\ui\vbox_layout.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>
